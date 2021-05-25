@@ -1,0 +1,14 @@
+{
+    "DomainId": "d-xvardyjy5ggb",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "conda-efs",
+                    "AppImageConfigName": "conda-efs-env-config"
+                }
+            ]
+        }
+    }
+}
+

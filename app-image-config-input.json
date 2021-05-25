@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "conda-efs-env-config",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "python3",
+                "DisplayName": "conda with env on EFS"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/root",
+            "DefaultUid": 0,
+            "DefaultGid": 0
+        }
+    }
+}
