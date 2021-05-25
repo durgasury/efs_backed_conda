@@ -2,7 +2,14 @@
 
 ## Installation steps
 
-1. Build the docker image and push to ECR. Attach the docker image to the SageMaker Studio Domain 
+1. Build the docker image and push to ECR. Attach the docker image to the SageMaker Studio Domain. You can use the AWS Console or the command line as described below:
+
+```bash
+ aws sagemaker create-image --image-name conda-efs --role-arn <Role> --display-name "Conda with EFS backed env"
+ aws sagemaker create-image-version --base-image <image ECR ARN> --image-name conda-efs
+ aws sagemaker create-app-image-config --cli-input-json file://app-image-config-input.json
+ aws sagemaker update-domain --cli-input-json file://update-domain.json
+ ```
 
 3. From Studio use the Image terminal of the **datascience** first-party kernel image and create the conda environment in the following way:
 
