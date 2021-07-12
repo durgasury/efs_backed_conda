@@ -14,5 +14,5 @@ RUN conda install numpy scikit-learn ipykernel
 
 # update kernelspec to load our custom environment strored on EFS
 RUN rm -rf /miniconda/share/jupyter/kernels/python3
-#COPY custom_kernel_spec/ /miniconda/share/jupyter/kernels/python3
+COPY custom_kernel_spec/ /miniconda/share/jupyter/kernels/python3
 
