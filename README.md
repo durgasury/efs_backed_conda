@@ -17,7 +17,7 @@
 mkdir -p ~/.conda/envs
 conda create -p ~/.conda/envs/custom
 conda activate custom
-conda install scikit-learn numpy
+conda install scikit-learn numpy ipykernel
 ```
 
 Also create a **.condarc** file on the EFS volume with the following content:
