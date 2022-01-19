@@ -1,5 +1,5 @@
 {
-    "DomainId": "d-xvardyjy5ggb",
+    "DomainId": "<your-domain-id>",
     "DefaultUserSettings": {
         "KernelGatewayAppSettings": {
             "CustomImages": [

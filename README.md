@@ -1,4 +1,6 @@
-# Custom Conda environments on EFS
+# Custom Conda environments on SageMaker Studio
+
+This repository has steps to create persistent custom conda environments for SageMaker Studio by creating the environment on on EFS.
 
 ## Installation steps
 
