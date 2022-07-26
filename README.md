@@ -8,15 +8,22 @@ This repository has steps to create persistent custom conda environments for Sag
 2. Create the custom conda environment as follows:
 ```
 mkdir -p ~/.conda/envs
-conda create -p ~/.conda/envs/custom
-conda activate custom
-conda install scikit-learn numpy ipykernel
+conda create --yes -p ~/.conda/envs/custom
+conda activate ~/.conda/envs/custom
+conda install -y ipykernel
 ```
 3. Create a .condarc file on the EFS volume (`~/.condarc`)with the following content:
 ```
 envs_dirs:
   - ~/.conda/envs
 ```
+
+You can write these lines directly to the `~/.condarc` using the following command
+```
+echo "envs_dirs:
+  - ~/.conda/envs" > ~/.condarc
+```
+
 You can now use `conda activate custom` and `conda deactivate` to use the custom environment from within the `datascience` kernel. 
 
 To use the custom environment in a notebook, open a notebook using the datascience image, and click on the kernel switcher. You will be able to see the custom environment listed under the 'kernel' dropdown as shown in the image below.
